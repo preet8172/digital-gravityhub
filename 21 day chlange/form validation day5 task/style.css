@@ -1,0 +1,136 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: linear-gradient(135deg,#667eea,#764ba2);
+  overflow:hidden;
+}
+
+.container{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+}
+
+.form{
+  width:400px;
+  padding:40px;
+  border-radius:20px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(15px);
+  border:1px solid rgba(255,255,255,0.2);
+  box-shadow:0 8px 32px rgba(0,0,0,0.2);
+  color:white;
+  animation: fadeIn 1s ease;
+}
+
+.form h2{
+  text-align:center;
+  font-size:32px;
+  margin-bottom:10px;
+}
+
+.subtitle{
+  text-align:center;
+  margin-bottom:30px;
+  color:#eee;
+  font-size:14px;
+}
+
+.form-control{
+  position:relative;
+  margin-bottom:25px;
+}
+
+.form-control i{
+  position:absolute;
+  left:15px;
+  top:50%;
+  transform:translateY(-50%);
+  color:#ddd;
+}
+
+.form-control input,
+.form-control select{
+  width:100%;
+  padding:14px 14px 14px 45px;
+  border:none;
+  outline:none;
+  border-radius:12px;
+  background:rgba(255,255,255,0.15);
+  color:rgb(34, 33, 33);
+  font-size:15px;
+  transition:0.3s;
+}
+
+.form-control input::placeholder{
+  color:#f2daf5;
+}
+
+.form-control input:focus,
+.form-control select:focus{
+  background:rgba(255,255,255,0.25);
+  transform:scale(1.02);
+  box-shadow:0 0 10px rgba(255,255,255,0.4);
+}
+
+.form-control select{
+  appearance:none;
+  cursor:pointer;
+}
+
+.form-control small{
+  color:#ffb3b3;
+  position:absolute;
+  left:5px;
+  bottom:-18px;
+  visibility:hidden;
+}
+
+button{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:12px;
+  background:linear-gradient(45deg,#ff6ec4,#7873f5);
+  color:white;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+@keyframes fadeIn{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* Responsive */
+
+@media(max-width:500px){
+  .form{
+    width:100%;
+    padding:30px 20px;
+  }
+}

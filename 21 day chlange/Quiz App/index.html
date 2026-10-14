@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Preet's Code</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <div class="phone">
+    <div class="status-bar">
+      <div>10:00</div>
+      <div> 90%</div>
+    </div>
+
+    <div class="header">
+      <h1>Preet's Code</h1>
+    </div>
+
+    <div class="stats">
+      <div class="stat">Level <span id="level">1</span></div>
+      <div class="stat">XP <span id="xp">240</span>/500</div>
+    </div>
+
+    <div class="timer" id="timer">20</div>
+
+    <div class="content" id="quiz-container">
+      <div class="question" id="question-text"></div>
+      <div class="options" id="options"></div>
+    </div>
+
+    <button class="hint-btn" id="hint-btn"> Hint (1 left)</button>
+    <button class="next-btn" id="next-btn" style="display:none;">Continue </button>
+
+    <!-- Result Screen -->
+    <div class="content" id="result-screen" style="display:none; text-align:center; padding-top:60px;">
+      <h2 style="font-size:28px; margin-bottom:10px;">Quiz Completed! </h2>
+      <div id="final-score" style="font-size:62px; font-weight:700; margin:20px 0; color:#22c55e;"></div>
+      <p id="final-text" style="font-size:18px; margin-bottom:30px;"></p>
+      <button class="next-btn" onclick="restartQuiz()">Play Again</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
